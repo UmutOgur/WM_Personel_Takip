@@ -1,0 +1,14 @@
+﻿@model WM_Personel_Takip.Models.Birim
+@{
+    ViewData["Title"] = "YeniBirim";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<form class="form-group" method="post">
+
+    <h1>Birim Adı</h1>
+    @Html.TextBoxFor(x => x.BirimAD, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">EKLE</button>
+</form>

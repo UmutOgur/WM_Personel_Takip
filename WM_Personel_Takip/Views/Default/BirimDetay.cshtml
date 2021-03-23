@@ -1,0 +1,34 @@
+﻿@using WM_Personel_Takip.Models
+@model List<Personel>
+@{
+    ViewData["Title"] = "BirimDetay";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+
+<br />
+<h2>@ViewBag.brm Departmanı</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th style="background-color:aqua">İD</th>
+        <th style="background-color:aqua">AD</th>
+        <th style="background-color:aqua">SOYAD</th>
+        <th style="background-color:aqua">ŞEHİR</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+
+
+        <tr>
+            <td>@item.PersonelID</td>
+            <td>@item.PersonelAD</td>
+            <td>@item.PersnelSOYAD</td>
+            <td>@item.PersonelSEHİR</td>
+
+        </tr>
+    }
+</table>
+
+

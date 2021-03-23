@@ -1,0 +1,40 @@
+﻿@using WM_Personel_Takip.Models
+@model List<Personel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th style="background-color:aqua">İD</th>
+        <th style="background-color:aqua">AD</th>
+        <th style="background-color:aqua">SOYAD</th>
+        <th style="background-color:aqua">ŞEHİR</th>
+        <th style="background-color:aqua">SİL</th>
+        <th style="background-color:aqua">GÜNCELLE</th>
+        <th style="background-color:aqua">DETAYLAR</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+
+
+<tr>
+    <td>@item.PersonelID</td>
+    <td>@item.PersonelAD</td>
+    <td>@item.PersnelSOYAD</td>
+    <td>@item.PersonelSEHİR</td>
+    <td><a href="#" class="btn btn-danger">Sil</a></td>
+    <td><a href="#" class="btn btn-success">Güncelle</a></td>
+    <td><a href="#" class="btn btn-info">Detay</a></td>
+
+</tr>
+    }
+</table>
+
+<a href="/Personelim/YeniPersonel/" class=" btn btn-success">Personel Ekle</a>
+
+
+

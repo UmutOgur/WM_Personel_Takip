@@ -1,0 +1,18 @@
+﻿@model WM_Personel_Takip.Models.Birim
+@{
+    ViewData["Title"] = "BirimGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<br />
+@using (Html.BeginForm("BirimGuncelle", "Default", FormMethod.Post))
+{
+    <h1>Birim ID</h1>
+    @Html.TextBoxFor(x => x.BirimID, new { @class = "form-control" })
+    <br />
+    <h1>Birim Adı</h1>
+    @Html.TextBoxFor(x => x.BirimAD, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success" style="background-color:chartreuse"> BİRİM GÜNCELLE </button>
+}
+
